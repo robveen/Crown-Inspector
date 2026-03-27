@@ -5,7 +5,11 @@ struct MainMenuView: View {
 
     var body: some View {
         ScrollView {
-            VStack(spacing: 12) {
+            VStack(spacing: 10) {
+                Image(systemName: "crown.fill")
+                    .font(.title3)
+                    .foregroundStyle(.yellow)
+
                 Text("Crown Inspector")
                     .font(.headline)
                     .fontWeight(.bold)
@@ -36,36 +40,34 @@ struct MainMenuView: View {
 
                 // Stats preview
                 if game.gameState.totalShiftsCompleted > 0 {
-                    VStack(alignment: .leading, spacing: 4) {
-                        HStack {
-                            Text("Money:")
-                                .font(.caption2)
-                            Spacer()
-                            Text("\(game.gameState.economy.money)")
-                                .font(.caption2)
-                                .fontWeight(.bold)
-                        }
-                        HStack {
-                            Text("Prestige:")
-                                .font(.caption2)
-                            Spacer()
-                            Text("\(game.gameState.economy.prestige)")
-                                .font(.caption2)
-                                .fontWeight(.bold)
-                        }
-                        HStack {
-                            Text("Rank:")
-                                .font(.caption2)
-                            Spacer()
-                            Text(game.gameState.currentTier.displayName)
-                                .font(.caption2)
-                                .fontWeight(.bold)
-                        }
+                    VStack(alignment: .leading, spacing: 3) {
+                        statRow("Money", "\(game.gameState.economy.money)", icon: "dollarsign.circle")
+                        statRow("Prestige", "\(game.gameState.economy.prestige)", icon: "star.fill")
+                        statRow("Rank", game.gameState.currentTier.displayName, icon: "crown")
                     }
                     .padding(.top, 4)
                 }
             }
             .padding(.horizontal, 4)
+        }
+        .onAppear {
+            GameCenterManager.shared.authenticate()
+        }
+    }
+
+    private func statRow(_ label: String, _ value: String, icon: String) -> some View {
+        HStack(spacing: 4) {
+            Image(systemName: icon)
+                .font(.system(size: 8))
+                .foregroundStyle(.secondary)
+                .frame(width: 12)
+            Text(label)
+                .font(.caption2)
+                .foregroundStyle(.secondary)
+            Spacer()
+            Text(value)
+                .font(.caption2)
+                .fontWeight(.bold)
         }
     }
 }

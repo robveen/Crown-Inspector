@@ -9,8 +9,12 @@ struct ContentView: View {
             switch game.currentScreen {
             case .mainMenu:
                 MainMenuView()
+            case .modeSelect:
+                ModeSelectView()
             case .eventSelect:
                 EventSelectView()
+            case .briefing:
+                BriefingView()
             case .shift:
                 ShiftView()
             case .shiftResult:
@@ -19,6 +23,8 @@ struct ContentView: View {
                 ExpensesView()
             case .gameOver:
                 GameOverView()
+            case .fired:
+                FiredView()
             }
         }
         .animation(.easeInOut(duration: 0.3), value: game.currentScreen)

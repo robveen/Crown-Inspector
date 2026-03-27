@@ -1,13 +1,13 @@
 import SwiftUI
 
-/// Displays the document/ID card a person presents
+/// Displays the document/ID card — optimized for vertical (right) split panel
 struct DocumentCardView: View {
     let document: Document
     let minimumAge: Int?
 
     private var formattedDOB: String {
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
+        formatter.dateFormat = "dd/MM/yy"
         return formatter.string(from: document.dateOfBirth)
     }
 
@@ -16,41 +16,41 @@ struct DocumentCardView: View {
             // Header
             HStack {
                 Image(systemName: "doc.text.fill")
-                    .font(.system(size: 8))
-                Text("ID DOCUMENT")
-                    .font(.system(size: 8, weight: .bold))
+                    .font(.system(size: 7))
+                Text("ID")
+                    .font(.system(size: 7, weight: .bold))
                 Spacer()
+                if let minimumAge {
+                    Text("\(minimumAge)+")
+                        .font(.system(size: 7, weight: .bold))
+                        .foregroundStyle(.orange)
+                }
             }
             .foregroundStyle(.secondary)
 
-            Divider()
+            // Photo (document appearance)
+            AppearanceIconView(appearance: document.photo, size: 32)
+                .frame(maxWidth: .infinity, alignment: .center)
 
-            // Photo representation (appearance from document)
-            HStack(spacing: 6) {
-                AppearanceIconView(appearance: document.photo, size: 28)
+            // Name
+            Text(document.firstName)
+                .font(.system(size: 9, weight: .semibold))
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+            Text(document.lastName)
+                .font(.system(size: 9, weight: .semibold))
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
 
-                VStack(alignment: .leading, spacing: 1) {
-                    Text(document.fullName)
-                        .font(.system(size: 11, weight: .semibold))
-                        .lineLimit(1)
+            // DOB — player must calculate age themselves
+            Text("DOB")
+                .font(.system(size: 7))
+                .foregroundStyle(.secondary)
+            Text(formattedDOB)
+                .font(.system(size: 9, weight: .medium, design: .monospaced))
 
-                    Text("DOB: \(formattedDOB)")
-                        .font(.system(size: 9))
-                        .foregroundStyle(.secondary)
-
-                    if let minimumAge {
-                        Text("Req: \(minimumAge)+")
-                            .font(.system(size: 8, weight: .medium))
-                            .foregroundStyle(.orange)
-                    }
-                }
-            }
+            Spacer(minLength: 0)
         }
-        .padding(6)
-        .background(
-            RoundedRectangle(cornerRadius: 6)
-                .fill(Color(.darkGray).opacity(0.4))
-        )
-        .padding(.horizontal, 4)
+        .padding(4)
     }
 }

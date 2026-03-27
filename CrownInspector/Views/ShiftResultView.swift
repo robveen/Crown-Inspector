@@ -10,33 +10,61 @@ struct ShiftResultView: View {
                 Text("Shift Complete")
                     .font(.headline)
 
-                if let result = game.lastDecisionResult {
-                    // We show aggregate stats from the game manager
+                // Mode-specific header
+                if game.currentGameMode == .endless {
+                    HStack {
+                        Text("Score:")
+                            .font(.caption)
+                        Text("\(game.endlessScore)")
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .foregroundStyle(.yellow)
+                    }
+                } else if game.currentGameMode == .timeTrial {
+                    Text("Time Trial")
+                        .font(.caption2)
+                        .foregroundStyle(.blue)
                 }
 
                 // Stats
                 VStack(spacing: 4) {
                     statRow("Correct", "\(game.gameState.totalCorrectDecisions)", color: .green)
                     statRow("Mistakes", "\(game.gameState.totalMistakes)", color: .red)
-                    statRow("Money", "\(game.gameState.economy.money)", color: .yellow)
-                    statRow("Prestige", "\(game.gameState.economy.prestige)", color: .purple)
+
+                    if game.currentGameMode == .career {
+                        statRow("Money", "\(game.gameState.economy.money)", color: .yellow)
+                        statRow("Prestige", "\(game.gameState.economy.prestige)", color: .purple)
+                    }
                 }
 
-                Divider()
+                if game.currentGameMode == .career {
+                    Divider()
 
-                // Status indicators
-                HStack(spacing: 12) {
-                    statusIcon("fork.knife", game.gameState.economy.hunger.displayName)
-                    statusIcon("drop.fill", game.gameState.economy.hygiene.displayName)
-                    statusIcon("sparkles", game.gameState.economy.luxury.displayName)
-                }
-                .font(.system(size: 9))
+                    // Status indicators
+                    HStack(spacing: 12) {
+                        statusIcon("fork.knife", game.gameState.economy.hunger.displayName)
+                        statusIcon("drop.fill", game.gameState.economy.hygiene.displayName)
+                        statusIcon("sparkles", game.gameState.economy.luxury.displayName)
+                    }
+                    .font(.system(size: 9))
 
-                Button("Pay Expenses") {
-                    game.currentScreen = .expenses
+                    Button("Pay Expenses") {
+                        game.currentScreen = .expenses
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.blue)
+                } else {
+                    Button("Play Again") {
+                        game.currentScreen = .modeSelect
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.green)
+
+                    Button("Menu") {
+                        game.currentScreen = .mainMenu
+                    }
+                    .buttonStyle(.bordered)
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(.blue)
             }
             .padding(.horizontal, 4)
         }

@@ -7,7 +7,7 @@ struct CrownInspectorApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                MainMenuView()
+                ContentView()
             }
             .environmentObject(gameManager)
         }

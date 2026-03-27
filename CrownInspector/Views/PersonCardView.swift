@@ -1,49 +1,59 @@
 import SwiftUI
 
-/// Displays the actual person standing in front of you
+/// Displays the actual person at the gate — optimized for vertical (left) split panel
 struct PersonCardView: View {
     let person: Person
-
-    private var formattedDOB: String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        return formatter.string(from: person.dateOfBirth)
-    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
             // Header
             HStack {
                 Image(systemName: "person.fill")
-                    .font(.system(size: 8))
-                Text("AT THE GATE")
-                    .font(.system(size: 8, weight: .bold))
+                    .font(.system(size: 7))
+                Text("GATE")
+                    .font(.system(size: 7, weight: .bold))
                 Spacer()
+                if person.specialStatus == .vip {
+                    Text("VIP")
+                        .font(.system(size: 7, weight: .black))
+                        .foregroundStyle(.yellow)
+                } else if person.specialStatus == .blacklisted {
+                    Text("BAN")
+                        .font(.system(size: 7, weight: .black))
+                        .foregroundStyle(.red)
+                }
             }
             .foregroundStyle(.secondary)
 
-            Divider()
+            // Person appearance
+            AppearanceIconView(appearance: person.appearance, size: 32)
+                .frame(maxWidth: .infinity, alignment: .center)
 
-            // Actual person appearance
-            HStack(spacing: 6) {
-                AppearanceIconView(appearance: person.appearance, size: 28)
+            // Name they state
+            Text(person.firstName)
+                .font(.system(size: 9, weight: .semibold))
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+            Text(person.lastName)
+                .font(.system(size: 9, weight: .semibold))
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
 
-                VStack(alignment: .leading, spacing: 1) {
-                    Text(person.fullName)
-                        .font(.system(size: 11, weight: .semibold))
-                        .lineLimit(1)
+            // What they claim
+            Text("Says:")
+                .font(.system(size: 7))
+                .foregroundStyle(.secondary)
+            Text(formattedDOB)
+                .font(.system(size: 9, weight: .medium, design: .monospaced))
 
-                    Text("Claims: \(formattedDOB)")
-                        .font(.system(size: 9))
-                        .foregroundStyle(.secondary)
-                }
-            }
+            Spacer(minLength: 0)
         }
-        .padding(6)
-        .background(
-            RoundedRectangle(cornerRadius: 6)
-                .fill(Color(.darkGray).opacity(0.3))
-        )
-        .padding(.horizontal, 4)
+        .padding(4)
+    }
+
+    private var formattedDOB: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yy"
+        return formatter.string(from: person.dateOfBirth)
     }
 }

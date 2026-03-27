@@ -28,6 +28,14 @@
 		A10019 /* ShiftResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10019; };
 		A10020 /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10020; };
 		A10021 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10021; };
+		A10022 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10022; };
+		A10023 /* ShiftBriefing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10023; };
+		A10024 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10024; };
+		A10025 /* GameCenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10025; };
+		A10026 /* ModeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10026; };
+		A10027 /* BriefingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10027; };
+		A10028 /* FiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10028; };
+		A10029 /* ComplicationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10029; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +60,14 @@
 		B10019 /* ShiftResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftResultView.swift; sourceTree = "<group>"; };
 		B10020 /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
 		B10021 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		B10022 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		B10023 /* ShiftBriefing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftBriefing.swift; sourceTree = "<group>"; };
+		B10024 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		B10025 /* GameCenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterManager.swift; sourceTree = "<group>"; };
+		B10026 /* ModeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectView.swift; sourceTree = "<group>"; };
+		B10027 /* BriefingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefingView.swift; sourceTree = "<group>"; };
+		B10028 /* FiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiredView.swift; sourceTree = "<group>"; };
+		B10029 /* ComplicationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationProvider.swift; sourceTree = "<group>"; };
 		C10001 /* CrownInspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrownInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,6 +97,7 @@
 				E10003 /* Models */,
 				E10004 /* ViewModels */,
 				E10005 /* Views */,
+				E10007 /* Complications */,
 				B10003 /* Assets.xcassets */,
 			);
 			path = CrownInspector;
@@ -95,6 +112,10 @@
 				B10007 /* GameState.swift */,
 				B10008 /* ShiftResult.swift */,
 				B10009 /* EventFactory.swift */,
+				B10022 /* GameMode.swift */,
+				B10023 /* ShiftBriefing.swift */,
+				B10024 /* Subscription.swift */,
+				B10025 /* GameCenterManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,7 +134,9 @@
 			children = (
 				B10002 /* ContentView.swift */,
 				B10012 /* MainMenuView.swift */,
+				B10026 /* ModeSelectView.swift */,
 				B10013 /* EventSelectView.swift */,
+				B10027 /* BriefingView.swift */,
 				B10014 /* ShiftView.swift */,
 				B10015 /* DocumentCardView.swift */,
 				B10016 /* PersonCardView.swift */,
@@ -121,6 +144,7 @@
 				B10018 /* DecisionOverlayView.swift */,
 				B10019 /* ShiftResultView.swift */,
 				B10020 /* ExpensesView.swift */,
+				B10028 /* FiredView.swift */,
 				B10021 /* GameOverView.swift */,
 			);
 			path = Views;
@@ -132,6 +156,14 @@
 				C10001 /* CrownInspector.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E10007 /* Complications */ = {
+			isa = PBXGroup;
+			children = (
+				B10029 /* ComplicationProvider.swift */,
+			);
+			path = Complications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,10 +243,16 @@
 				A10007 /* GameState.swift in Sources */,
 				A10008 /* ShiftResult.swift in Sources */,
 				A10009 /* EventFactory.swift in Sources */,
+				A10022 /* GameMode.swift in Sources */,
+				A10023 /* ShiftBriefing.swift in Sources */,
+				A10024 /* Subscription.swift in Sources */,
+				A10025 /* GameCenterManager.swift in Sources */,
 				A10010 /* GameManager.swift in Sources */,
 				A10011 /* PersonGenerator.swift in Sources */,
 				A10012 /* MainMenuView.swift in Sources */,
+				A10026 /* ModeSelectView.swift in Sources */,
 				A10013 /* EventSelectView.swift in Sources */,
+				A10027 /* BriefingView.swift in Sources */,
 				A10014 /* ShiftView.swift in Sources */,
 				A10015 /* DocumentCardView.swift in Sources */,
 				A10016 /* PersonCardView.swift in Sources */,
@@ -222,7 +260,9 @@
 				A10018 /* DecisionOverlayView.swift in Sources */,
 				A10019 /* ShiftResultView.swift in Sources */,
 				A10020 /* ExpensesView.swift in Sources */,
+				A10028 /* FiredView.swift in Sources */,
 				A10021 /* GameOverView.swift in Sources */,
+				A10029 /* ComplicationProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
