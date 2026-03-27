@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10001 /* CrownInspectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10001; };
+		A10002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10002; };
+		A10003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10003; };
+		A10004 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10004; };
+		A10005 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10005; };
+		A10006 /* Economy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10006; };
+		A10007 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10007; };
+		A10008 /* ShiftResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10008; };
+		A10009 /* EventFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10009; };
+		A10010 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10010; };
+		A10011 /* PersonGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10011; };
+		A10012 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10012; };
+		A10013 /* EventSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10013; };
+		A10014 /* ShiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10014; };
+		A10015 /* DocumentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10015; };
+		A10016 /* PersonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10016; };
+		A10017 /* AppearanceIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10017; };
+		A10018 /* DecisionOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10018; };
+		A10019 /* ShiftResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10019; };
+		A10020 /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10020; };
+		A10021 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10021; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B10001 /* CrownInspectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrownInspectorApp.swift; sourceTree = "<group>"; };
+		B10002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B10003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B10004 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B10005 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B10006 /* Economy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Economy.swift; sourceTree = "<group>"; };
+		B10007 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		B10008 /* ShiftResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftResult.swift; sourceTree = "<group>"; };
+		B10009 /* EventFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFactory.swift; sourceTree = "<group>"; };
+		B10010 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		B10011 /* PersonGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGenerator.swift; sourceTree = "<group>"; };
+		B10012 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		B10013 /* EventSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSelectView.swift; sourceTree = "<group>"; };
+		B10014 /* ShiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftView.swift; sourceTree = "<group>"; };
+		B10015 /* DocumentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCardView.swift; sourceTree = "<group>"; };
+		B10016 /* PersonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCardView.swift; sourceTree = "<group>"; };
+		B10017 /* AppearanceIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceIconView.swift; sourceTree = "<group>"; };
+		B10018 /* DecisionOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionOverlayView.swift; sourceTree = "<group>"; };
+		B10019 /* ShiftResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftResultView.swift; sourceTree = "<group>"; };
+		B10020 /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
+		B10021 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		C10001 /* CrownInspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrownInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D10001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E10001 = {
+			isa = PBXGroup;
+			children = (
+				E10002 /* CrownInspector */,
+				E10006 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E10002 /* CrownInspector */ = {
+			isa = PBXGroup;
+			children = (
+				B10001 /* CrownInspectorApp.swift */,
+				E10003 /* Models */,
+				E10004 /* ViewModels */,
+				E10005 /* Views */,
+				B10003 /* Assets.xcassets */,
+			);
+			path = CrownInspector;
+			sourceTree = "<group>";
+		};
+		E10003 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B10004 /* Person.swift */,
+				B10005 /* Event.swift */,
+				B10006 /* Economy.swift */,
+				B10007 /* GameState.swift */,
+				B10008 /* ShiftResult.swift */,
+				B10009 /* EventFactory.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E10004 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B10010 /* GameManager.swift */,
+				B10011 /* PersonGenerator.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E10005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B10002 /* ContentView.swift */,
+				B10012 /* MainMenuView.swift */,
+				B10013 /* EventSelectView.swift */,
+				B10014 /* ShiftView.swift */,
+				B10015 /* DocumentCardView.swift */,
+				B10016 /* PersonCardView.swift */,
+				B10017 /* AppearanceIconView.swift */,
+				B10018 /* DecisionOverlayView.swift */,
+				B10019 /* ShiftResultView.swift */,
+				B10020 /* ExpensesView.swift */,
+				B10021 /* GameOverView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E10006 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C10001 /* CrownInspector.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F10001 /* CrownInspector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = G10003;
+			buildPhases = (
+				F10002 /* Sources */,
+				D10001 /* Frameworks */,
+				F10003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrownInspector;
+			productName = CrownInspector;
+			productReference = C10001 /* CrownInspector.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		H10001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					F10001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = G10001;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E10001;
+			productRefGroup = E10006 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F10001 /* CrownInspector */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F10003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10003 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F10002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10001 /* CrownInspectorApp.swift in Sources */,
+				A10002 /* ContentView.swift in Sources */,
+				A10004 /* Person.swift in Sources */,
+				A10005 /* Event.swift in Sources */,
+				A10006 /* Economy.swift in Sources */,
+				A10007 /* GameState.swift in Sources */,
+				A10008 /* ShiftResult.swift in Sources */,
+				A10009 /* EventFactory.swift in Sources */,
+				A10010 /* GameManager.swift in Sources */,
+				A10011 /* PersonGenerator.swift in Sources */,
+				A10012 /* MainMenuView.swift in Sources */,
+				A10013 /* EventSelectView.swift in Sources */,
+				A10014 /* ShiftView.swift in Sources */,
+				A10015 /* DocumentCardView.swift in Sources */,
+				A10016 /* PersonCardView.swift in Sources */,
+				A10017 /* AppearanceIconView.swift in Sources */,
+				A10018 /* DecisionOverlayView.swift in Sources */,
+				A10019 /* ShiftResultView.swift in Sources */,
+				A10020 /* ExpensesView.swift in Sources */,
+				A10021 /* GameOverView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		G10002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		G10004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = watchos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		G10005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Crown Inspector";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.crowninspector.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		G10006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Crown Inspector";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.crowninspector.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		G10001 /* Build configuration list for PBXProject "CrownInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				G10002 /* Debug */,
+				G10004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		G10003 /* Build configuration list for PBXNativeTarget "CrownInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				G10005 /* Debug */,
+				G10006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = H10001 /* Project object */;
+}
